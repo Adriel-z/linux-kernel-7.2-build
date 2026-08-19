@@ -244,12 +244,36 @@ grep iwlwifi /lib/modules/7.2.0-custom/modules.dep                       # 依�
 
 ---
 
-## 内核文档（htmldocs）
+## 内核文档（htmldocs 及全部格式）
 
-- 构建目标：`make htmldocs`（Sphinx，`needs_sphinx >= 3.4.3`，本机用 Sphinx 8.2.3 + alabaster + pyyaml）
-- 产物规模：**4024 个 HTML 页面，约 580MB**，位于 `Documentation/output/`
-- 独立打包：`linux-7.2-docs-htmldocs.tar.xz`（约 58MB）→ **已发布到本仓库 Release**
-- 阅读入口：解包后打开 `index.html`
+**全部 10 种文档格式均已构建**（`Documentation/Makefile` 定义的目标）：
+
+| 格式 | 目标 | 产物 | 规模 |
+|---|---|---|---|
+| HTML | `make htmldocs` | 4024 页 | 580MB（压缩 58MB） |
+| PDF | `make pdfdocs`（xelatex） | **64 个 PDF**（含 4 个大文档） | 94MB |
+| LaTeX | `make latexdocs` | 683 个文件 | 172MB |
+| EPUB | `make epubdocs` | 4221 个文件 | 130MB |
+| XML | `make xmldocs` | 4021 个文件 | 160MB |
+| Man pages | `make mandocs` | 80142 个文件 | 357MB |
+| Texinfo | `make texinfodocs` | 134 个文件 | 129MB |
+| Info | `make infodocs` | TheLinuxKernel.info | — |
+
+- **全部格式合集**：`linux-7.2-docs-all-formats.tar.xz`（226MB）→ **已发布到本仓库 Release**
+- **HTML 单独包**：`linux-7.2-docs-htmldocs.tar.xz`（58MB）→ 同上
+- 阅读入口：HTML 解包后打开 `index.html`；PDF 可直接阅读（core-api 1351 页 / admin-guide 1587 页 / arch 749 页 / translations 658 页）
+
+### 构建经验（PDF 部分）
+
+1. `pdfdocs` 需要 **TeX Live**（`texlive-xetex` + `texlive-latex-extra`），系统默认未装
+2. 4 个大文档（core-api/admin-guide/arch/translations）默认 TeX 内存（`main_memory=5000000`）**不够**，
+   报 `TeX capacity exceeded` / `Dimension too large`。解法：在 `/etc/texmf/texmf.d/` 增加配置
+   `main_memory = 20000000` 等并运行 `update-texmf`，**同时需 `fmtutil-sys --byfmt xelatex` 重建 format**
+   （否则 xelatex 仍用旧内存限制）
+3. `infodocs` 需要 **texinfo** 包（提供 `makeinfo`）
+4. sphinx-build-wrapper 并行构建大 PDF 时会因资源竞争失败，可手动 `xelatex xxx.tex` 串行构建后归位
+5. 大量 `Dimension too large`（fancybox 框架）为无害排版警告，不影响 PDF 产出
+
 - **面向初学者的内核阅读/理解教学指南**：见 [docs/kernel-reading-guide.md](docs/kernel-reading-guide.md)
 
 ---
