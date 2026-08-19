@@ -1,0 +1,41 @@
+====================
+
+Established title styles: =/= = -
+
+The parent of level 2 sections cannot be reached. The parser is at section level 2 but the current node has only 0 parent section(s).
+One reason may be a high level section used in a directive that parses its content into a base node not attached to the document
+(up to Docutils 0.21, these sections were silently dropped). [docutils]
+<KERNEL_SRC>/Documentation/gpu/driver-uapi:31: ./include/uapi/drm/xe_drm.h:2551: ERROR: A level 2 section cannot be used here.
+
+User Interface
+==============
+
+Established title styles: =/= = -
+
+The parent of level 2 sections cannot be reached. The parser is at section level 2 but the current node has only 0 parent section(s).
+One reason may be a high level section used in a directive that parses its content into a base node not attached to the document
+(up to Docutils 0.21, these sections were silently dropped). [docutils]
+<KERNEL_SRC>/Documentation/gpu/drm-kms:302: ./drivers/gpu/drm/drm_atomic.c:1761: WARNING: Duplicate C declaration, also defined at gpu/drm-kms:405.
+Declaration is '.. c:function:: int drm_atomic_commit (struct drm_atomic_commit *state)'. [duplicate_declaration.c]
+<KERNEL_SRC>/Documentation/gpu/drm-kms:365: ./drivers/gpu/drm/drm_fourcc.c:408: WARNING: Duplicate C declaration, also defined at gpu/drm-kms:35.
+Declaration is '.. c:function:: const struct drm_format_info * drm_format_info (u32 format)'. [duplicate_declaration.c]
+<KERNEL_SRC>/Documentation/gpu/drm-kms:496: ./drivers/gpu/drm/drm_modeset_lock.c:377: WARNING: Duplicate C declaration, also defined at gpu/drm-kms:48.
+Declaration is '.. c:function:: int drm_modeset_lock (struct drm_modeset_lock *lock, struct drm_modeset_acquire_ctx *ctx)'. [duplicate_declaration.c]
+WARNING: ./drivers/gpu/drm/drm_gem_shmem_helper.c:174 expecting prototype for __drm_gem_shmem_release_sgt_locked(). Prototype was for __drm_gem_shmem_free_sgt_locked() instead
+WARNING: ./drivers/gpu/buddy.c:1509 Excess function parameter 'p' description in 'gpu_buddy_print'
+WARNING: ./include/drm/drm_exec.h:159 function parameter '_exec' not described in 'drm_exec_retry'
+WARNING: ./include/drm/drm_exec.h:159 Excess function parameter 'exec' description in 'drm_exec_retry'
+WARNING: ./include/drm/drm_exec.h:159 function parameter '_exec' not described in 'drm_exec_retry'
+WARNING: ./include/drm/drm_exec.h:159 Excess function parameter 'exec' description in 'drm_exec_retry'
+<KERNEL_SRC>/Documentation/gpu/drm-uapi:613: ./drivers/gpu/drm/drm_ioctl.c:936: WARNING: Duplicate C declaration, also defined at gpu/drm-uapi:69.
+Declaration is '.. c:function:: bool drm_ioctl_flags (unsigned int nr, unsigned int *flags)'. [duplicate_declaration.c]
+<KERNEL_SRC>/Documentation/driver-api/basics:42: ./kernel/time/time.c:370: WARNING: Duplicate C declaration, also defined at driver-api/basics:436.
+Declaration is '.. c:function:: unsigned int jiffies_to_msecs (const unsigned long j)'. [duplicate_declaration.c]
+<KERNEL_SRC>/Documentation/driver-api/basics:42: ./kernel/time/time.c:393: WARNING: Duplicate C declaration, also defined at driver-api/basics:453.
+Declaration is '.. c:function:: unsigned int jiffies_to_usecs (const unsigned long j)'. [duplicate_declaration.c]
+WARNING: ./block/blk-map.c:366 Excess function parameter 'op' description in 'bio_copy_kern'
+WARNING: /sys/bus/usb/devices/<busnum>-<devnum>:<config num>.<interface num>/<hid-bus>:<vendor-id>:<product-id>.<num>/os_mode is defined 2 times: <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go:364; <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go-s:234
+WARNING: /sys/bus/usb/devices/<busnum>-<devnum>:<config num>.<interface num>/<hid-bus>:<vendor-id>:<product-id>.<num>/os_mode_index is defined 2 times: <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go:373; <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go-s:243
+WARNING: /sys/bus/usb/devices/<busnum>-<devnum>:<config num>.<interface num>/<hid-bus>:<vendor-id>:<product-id>.<num>/touchpad/enabled is defined 2 times: <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go:636; <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go-s:252
+WARNING: /sys/bus/usb/devices/<busnum>-<devnum>:<config num>.<interface num>/<hid-bus>:<vendor-id>:<product-id>.<num>/touchpad/enabled_index is defined 2 times: <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go:645; <KERNEL_SRC>/Documentation/ABI/testing/sysfs-driver-hid-lenovo-go-s:261
+DOCS_EXIT=0

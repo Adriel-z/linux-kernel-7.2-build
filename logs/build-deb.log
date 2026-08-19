@@ -1,0 +1,17 @@
+  GEN     debian
+dpkg-buildpackage --build=binary --no-pre-clean --unsigned-changes -R'make -f debian/rules' -j1 -a$(cat debian/arch)
+dpkg-buildpackage: 警告: email address '<user> <user@host>' with single label domain
+dpkg-buildpackage: info: 源码包 linux-upstream
+dpkg-buildpackage: info: 源码版本 7.2.0-3
+dpkg-buildpackage: info: source distribution resolute
+dpkg-buildpackage: info: 源码修改者 <user> <user@host>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: 主机架构 amd64
+dpkg-source: 警告: email address '<user> <user@host>' with single label domain
+dpkg-checkbuilddeps: 错误: unmet build dependencies: debhelper-compat (= 12)
+dpkg-buildpackage: 错误: build dependencies/conflicts unsatisfied; aborting
+dpkg-buildpackage: hint: satisfy build dependencies with your package manager frontend
+make[2]: *** [scripts/Makefile.package:126：bindeb-pkg] 错误 3
+make[1]: *** [<KERNEL_SRC>/Makefile:1797：bindeb-pkg] 错误 2
+make: *** [Makefile:248：__sub-make] 错误 2
+DEB_EXIT=2

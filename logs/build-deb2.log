@@ -1,0 +1,31 @@
+  INSTALL debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-smd.ko
+  STRIP   debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-smd.ko
+  SIGN    debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-smd.ko
+  INSTALL debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-tun.ko
+  STRIP   debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-tun.ko
+  SIGN    debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-tun.ko
+  INSTALL debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-mhi.ko
+  STRIP   debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-mhi.ko
+  SIGN    debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/net/qrtr/qrtr-mhi.ko
+  INSTALL debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/virt/lib/irqbypass.ko
+  STRIP   debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/virt/lib/irqbypass.ko
+  SIGN    debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom/kernel/virt/lib/irqbypass.ko
+  DEPMOD  debian/linux-image-7.2.0-custom/lib/modules/7.2.0-custom
+dpkg-gencontrol: 警告: email address '<user> <user@host>' with single label domain
+dpkg-deb: 正在 '../linux-image-7.2.0-custom_7.2.0-4_amd64.deb' 中构建软件包 'linux-image-7.2.0-custom'。
+dpkg-gencontrol: 警告: email address '<user> <user@host>' with single label domain
+dpkg-deb: 正在 '../linux-image-7.2.0-custom-dbg_7.2.0-4_amd64.deb' 中构建软件包 'linux-image-7.2.0-custom-dbg'。
+dpkg-gencontrol: 警告: email address '<user> <user@host>' with single label domain
+dpkg-deb: 正在 '../linux-headers-7.2.0-custom_7.2.0-4_amd64.deb' 中构建软件包 'linux-headers-7.2.0-custom'。
+  INSTALL debian/linux-libc-dev/usr/include
+dpkg-gencontrol: 警告: email address '<user> <user@host>' with single label domain
+dpkg-deb: 正在 '../linux-libc-dev_7.2.0-4_amd64.deb' 中构建软件包 'linux-libc-dev'。
+ dpkg-genbuildinfo --build=binary -O../linux-upstream_7.2.0-4_amd64.buildinfo
+ dpkg-genchanges --build=binary -O../linux-upstream_7.2.0-4_amd64.changes
+dpkg-genchanges: 警告: email address '<user> <user@host>' with single label domain
+dpkg-genchanges: 警告: email address '<user> <user@host>' with single label domain
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-source: 警告: email address '<user> <user@host>' with single label domain
+dpkg-buildpackage: info: binary-only upload (no source included)
+DEB_EXIT=0

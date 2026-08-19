@@ -1,0 +1,3 @@
+GPL-2.0
+
+Linux kernel is licensed under GPL-2.0. This repository contains configuration files, build logs and documentation generated during a local kernel build; config/logs/docs are provided as-is for reference only.
